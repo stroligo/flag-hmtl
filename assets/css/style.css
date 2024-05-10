@@ -1,21 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Estrutura */
 body {
-  background-color: #ccc;
+  font-family: inter;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.espacamento {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
+h1 {
+  font-size: 3rem;
+  line-height: 120%;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 120%;
+  margin: 0;
+}
+header {
   background-color: #ddd;
-  padding: 50px;
+  padding: 0 10%;
 }
-.pesquisa {
+main {
   background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 25px;
-  padding: 5px 25px;
-  width: 164px;
+  flex: auto;
 }
-.pesquisa input {
-  outline: none;
-  border: none;
+section {
+  padding: 2rem 10%;
+}
+footer {
+  background-color: #ddd;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    li {
+      font-size: 1.2rem;
+      margin: 0;
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+/* Navegação */
+nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  #logo {
+    font-weight: 700;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  .menu {
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-bottom: 2px solid transparent;
+    }
+    a:hover {
+      text-decoration: none;
+
+      color: black;
+      border-bottom: 2px solid black;
+    }
+  }
+}
+/* Cards */
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  .card {
+    cursor: pointer;
+    background: #eee;
+    display: flex;
+    padding: 1rem;
+    gap: 0.5rem;
+    flex-direction: column;
+    border-radius: 10px;
+    figure {
+      width: 100%; /* Garante que a imagem ocupe toda a largura da figure */
+      height: 180px; /* Garante que a imagem ocupe toda a altura da figure */
+      margin: 0; /* Remove margens padrão */
+      padding: 0; /* Remove preenchimento padrão */
+    }
+
+    figure img {
+      width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+      height: 100%; /* Garante que a imagem ocupe toda a altura disponível */
+      object-fit: cover; /* Faz com que a imagem cubra completamente o espaço, mantendo sua proporção */
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.5rem 0;
+    }
+    .card-subtitle {
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+  }
+  .card:hover {
+    background-color: #f4f6fc;
+  }
+}
+/* Controller */
+.controller {
+  background: #f4f6fc;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+    background: transparent;
+
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    gap: 1rem;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    flex-direction: column;
+    .menu {
+      gap: 10px;
+      list-style: none;
+
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  }
+  section {
+    padding: 1rem;
+  }
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-cards {
+    grid-template-columns: 1fr;
+  }
 }
