@@ -1,3 +1,3 @@
 ## Projeto para o curso da FLAG
 
-## Estudo de HTML e CSS
+Estudo de HTML e CSS
