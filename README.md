@@ -2,4 +2,4 @@
 
 Estudo de HTML e CSS
 
-[Acessar o projeto no Vercel](https://flag-hmtl.vercel.app/).
+[Acessar o projeto no Vercel](https://flag-hmtl.vercel.app/)
